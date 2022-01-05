@@ -7,13 +7,28 @@
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
-        .box {
-            padding: 100px 0;
-            width: 400px;
-            text-align: center;
-            background-color: #ddd;
-            margin: 20px;
-            display: inline-block;
+        body {
+            background-color: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+        p, h3, ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style-type: none;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li.fav {
+            background: #b6829e;
+            color: white;
         }
     </style>
 </head>
@@ -25,10 +40,10 @@
         <div v-if="showBooks" >
             <ul>
                 <li v-for="book in books">
-                    <img :src="book.img" :alt="book.title">
+                    <img :src="book.img" :alt="book.title" :class="{ fav: book.isFav }">
                     <h3> {{ book.title }} </h3>
                     <p> {{ book.author }} </p>
-                    </li>
+                </li>
             </ul>
         </div>
         <button @click="toggleShowBooks()">
