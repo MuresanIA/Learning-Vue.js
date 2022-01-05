@@ -4,7 +4,8 @@
 </template>
 
 <script>
-import { Modal } from "./components/Modal.vue";
+import  Modal from "./components/Modal.vue";
+
 export default {
   name: "App",
   components: {
@@ -12,7 +13,7 @@ export default {
   },
   data() {
     return {
-      title: "My First Vue App :)",
+      title: "Vue App",
     };
   },
 };
