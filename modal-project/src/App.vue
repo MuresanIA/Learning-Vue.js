@@ -1,22 +1,21 @@
 <template>
   <h1>{{ title }}</h1>
+  <p>Welcome...</p>
   <Modal />
 </template>
 
 <script>
-import  Modal from "./components/Modal.vue";
+import Modal from './components/Modal'
 
 export default {
-  name: "App",
-  components: {
-    Modal,
-  },
+  name: 'App',
+  components: { Modal },
   data() {
     return {
-      title: "Vue App",
-    };
-  },
-};
+      title: 'My First Vue App!'
+    }
+  }
+}
 </script>
 
 <style>
@@ -28,7 +27,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 h1 {
   border-bottom: 1px solid #ddd;
   display: inline-block;
