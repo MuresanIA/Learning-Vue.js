@@ -13,7 +13,7 @@
     </select>
 
     <label>Skills:</label>
-    <input type="text" v-model="tempSkill" @keyup="addSkill" />
+    <input type="text" v-model="tempSkill" @keyup.alt="addSkill" />
     <div v-for="skill in skills" :key="skill" class="pill">
       {{ skill }}
     </div>
