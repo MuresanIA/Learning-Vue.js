@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": "1",
-      "title": "Create new homepage banner",
-      "details": "Lorem Ipsum",
+      "title": "Create new homepage banner test",
+      "details": "Lorem Ipsum test",
       "complete": false
     },
     {
