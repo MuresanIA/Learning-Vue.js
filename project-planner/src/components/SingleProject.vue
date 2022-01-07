@@ -1,8 +1,10 @@
 <template>
   <div class="project" :class="{ complete: project.complete }">
     <div class="actions">
+      <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
+        <span class="material-icons"> edit </span>
+      </router-link>
       <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
-      <span class="material-icons"> edit </span>
       <span @click="deleteProject" class="material-icons"> delete </span>
       <span @click="toggleComplete" class="material-icons tick"> done </span>
     </div>
@@ -74,6 +76,6 @@ h3 {
   border-left: 4px solid #00ce89;
 }
 .project.complete .tick {
-    color: #00ce89;
+  color: #00ce89;
 }
 </style>
