@@ -1,27 +1,32 @@
 <template>
-  <div v-if="projects.length">
-    <div v-for="project in projects" :key="project.id">
-      <SingleProject
-        :project="project"
-        @delete="handleDelete"
-        @complete="handleComplete"
-      />
+  <div class="home">
+    <FilterNav @filterChange="current = $event" :current="current"/>
+    <div v-if="projects.length">
+      <div v-for="project in projects" :key="project.id">
+        <SingleProject
+          :project="project"
+          @delete="handleDelete"
+          @complete="handleComplete"
+        />
+      </div>
     </div>
-  </div>
-  <div v-else>
-    <h3>Loading projects ...</h3>
+    <div v-else>
+      <h3>Loading projects ...</h3>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import SingleProject from "../components/SingleProject.vue";
+import FilterNav from "../components/FilterNav.vue";
 export default {
   name: "Home",
-  components: { SingleProject },
+  components: { SingleProject, FilterNav },
   data() {
     return {
       projects: [],
+      current: "all",
     };
   },
   methods: {
