@@ -14,12 +14,12 @@ const routes = [
 	{
 		path: '/jobs',
 		name: 'Jobs',
-		component: () => import('../views/Jobs.vue')
+		component: () => import('../views/jobs/Jobs.vue')
 	},
 	{
 		path: '/jobs/:id',
 		name: 'JobDetails',
-		component: () => import('../views/JobDetails.vue'),
+		component: () => import('../views/jobs/JobDetails.vue'),
 		props: true
 	},
 	// redirect
