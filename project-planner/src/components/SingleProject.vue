@@ -2,6 +2,9 @@
   <div class="project">
     <div class="actions">
       <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
+      <span class="material-icons"> edit </span>
+      <span class="material-icons"> delete </span>
+      <span class="material-icons"> done </span>
     </div>
     <div v-if="showDetails" class="details">
       <p>{{ project.details }}</p>
@@ -30,6 +33,17 @@ export default {
   border-left: 4px solid #e90074;
 }
 h3 {
+  cursor: pointer;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.material-icons {
+  font-size: 24px;
+  margin-left: 10px;
+  color: #bbb;
   cursor: pointer;
 }
 </style>
