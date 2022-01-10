@@ -24,3 +24,10 @@ export default {
   },
 };
 </script>
+<style>
+.home {
+  max-width: 1200px;
+  margin: 0px;
+  padding: 10px;
+}
+</style>
