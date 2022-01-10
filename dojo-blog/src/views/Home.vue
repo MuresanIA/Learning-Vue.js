@@ -1,9 +1,9 @@
 <template>
-  <p>Home</p>
-
-  <p>My name is : {{ name }}</p>
-  <p ref="p">My age is : {{ age }}</p>
+  Home
+  <p>My name is: {{ name }} and My age is: {{ age }}</p>
   <button @click="handleClick">click me</button>
+  <button @click="age++">Add 1 to age</button>
+  <input type="text" v-model="name">
 </template>
 
 <script>
@@ -11,25 +11,17 @@ import { ref } from "@vue/reactivity";
 // @ is an alias to /src
 export default {
   name: "Home",
-  components: {},
   setup() {
-    console.log(this);
-    let p = ref(null);
-    console.log(p, p.value);
-
-    let name = "Mario";
-    let age = 30;
+    const name = ref("Mario");
+    const age = ref(30);
 
     const handleClick = () => {
-      console.log(p, p.value);
-      p.value.classList.add("test");
-      p.value.textContent = "hello, ninjas";
+      (name.value = "luigi"), (age.value = 35);
     };
     return {
       name,
       age,
       handleClick,
-      p,
     };
   },
 };
