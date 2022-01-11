@@ -17,6 +17,12 @@ const routes = [
 		name: 'Create',
 		component: () => import('../views/Create.vue'),
 		props: true
+	},
+	{
+		path: '/tags/:tag',
+		name: 'Tag',
+		component: () => import('../views/Tag.vue'),
+		props: true
 	}
 ];
 
